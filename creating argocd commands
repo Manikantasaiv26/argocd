@@ -1,0 +1,13 @@
+minikube start
+   2 kubectl create namespace argocd...
+   3 kubectl get ns
+   4 kubectl -n argocd get all
+   5 kubectl  get all
+   6 kubectl  -n argocd get svc
+   7 kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "nodeport"}}'
+   8 kubectl port-forward svc/argocd-server -n argocd 8080:443
+   9 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}"
+  10 $temp = kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}"
+  11 $TEMP
+  12 [system.text.encoding]::utf8.getstring([system.convert]::frombase64string($temp))
+  13 kubectl port-forward svc/argocd-server -n argocd 8080:443
